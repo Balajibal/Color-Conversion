@@ -68,26 +68,32 @@ cv2.waitKey(0)
 
 
 # iv)Split and Merge RGB Image
-red = image[:,:,0]
-green = image[:,:,1]
-
-blue = image[:,:,2]
-
-
-Merge:
-cv2.merge((blue,green,red))
-
+import cv2
+img = cv2.imread("goku.jpg")
+b,g,r = cv2.split(img)
+cv2.imshow("RED MODEL", r)
+cv2.imshow("GREEN MODEL", g)
+cv2.imshow("BLUE MODEL ", b)
+merger = cv2.merge([b,g,r])
+cv2.imshow("MERGED IMAGE", merger )
+cv2.waitKey(0)
+cv2.destroyAllWindows()
 
 
 # v) Split and merge HSV Image
-hsv_image = cv2.cvtColor(goku, cv2.COLOR_BGR2HSV)
-h, s, v = cv2.split(hsv_image)
-s.fill(255)
-v.fill(255)
-hsv_image = cv2.merge([h, s, v])
-
-cv2.imshow('example', hsv_image)
-cv2.waitKey()
+import cv2
+img = cv2.imread("goku.jpg")
+img1= cv2.resize(img, (270,190))
+hsv = cv2.cvtColor(img1 , cv2.COLOR_BGR2HSV)
+cv2.imshow("INITIAL_HSV ", hsv)
+h,s,v = cv2.split(hsv)
+cv2.imshow("RED MODEL", h)
+cv2.imshow("GREEN MODEL", s)
+cv2.imshow("BLUE MODEL ", v)
+merger = cv2.merge([h,s,v])
+cv2.imshow("MERGED IMAGE", merger )
+cv2.waitKey(0)
+cv2.destroyAllWindows()
 
 
 
@@ -98,32 +104,31 @@ cv2.waitKey()
 ![goku](https://user-images.githubusercontent.com/75234946/162558259-a5743cd3-d94c-4b6c-abc9-71a68af11e47.jpg)
 
 ### ii) BGR and RGB to HSV and GRAY
-![Screenshot (38)](https://user-images.githubusercontent.com/75234946/162558272-a82e78b0-0b25-46a8-8f2e-774c1f1f5e0b.png)
-![Screenshot (37)](https://user-images.githubusercontent.com/75234946/162558338-028d7478-01aa-497d-83ae-beb5ad6c63d9.png)
-![Screenshot (49)](https://user-images.githubusercontent.com/75234946/162558362-8cff74af-d774-4611-9626-8156a7bb2afb.png)
-![Screenshot (41)](https://user-images.githubusercontent.com/75234946/162558401-f827e0a5-8d6d-4b42-85e3-96818372584e.png)
+![Screenshot (37)-COLLAGE](https://user-images.githubusercontent.com/75234946/163384517-fcfda655-6ce4-47d9-b585-17165eea4b3c.jpg)
+
 
 
 
 
 ### iii) HSV to RGB and BGR
-![Screenshot (44)](https://user-images.githubusercontent.com/75234946/162558425-77ab34a5-d7be-4f2b-b09d-06f4001797dd.png)
-![Screenshot (50)](https://user-images.githubusercontent.com/75234946/162558472-4cf3128c-a3f0-42e9-9b1c-23532a558fc7.png)
+![Screenshot (44)-COLLAGE](https://user-images.githubusercontent.com/75234946/163384850-349f59e5-04ed-46a2-9013-bd5c1091fc76.jpg)
+
 
 
 
 ### iv) RGB and BGR to YCrCb
-![Screenshot (53)](https://user-images.githubusercontent.com/75234946/162558493-101246b7-8645-4685-be41-9e0095357011.png)
-![Screenshot (51)](https://user-images.githubusercontent.com/75234946/162558539-8a4d153a-d82f-4361-90e7-5b796411fc95.png)
+![Screenshot (51)-COLLAGE](https://user-images.githubusercontent.com/75234946/163385132-7e2bfad1-39c4-45a1-839a-a90c1c72e548.jpg)
+
 
 
 
 ### v) Split and merge RGB Image
-![Screenshot (54)](https://user-images.githubusercontent.com/75234946/162558560-c7db04cf-6e50-4347-a297-2d18ec15d15f.png)
+![Screenshot (73)-COLLAGE](https://user-images.githubusercontent.com/75234946/163385817-22d191ac-43f1-4736-af43-7469dec7f0d0.jpg)
 
 
 ### vi) Split and merge HSV Image
-![Screenshot (55)](https://user-images.githubusercontent.com/75234946/162558585-d4d0b532-cfc4-4fae-b115-22d45d15fa06.png)
+![Screenshot (77)-COLLAGE](https://user-images.githubusercontent.com/75234946/163387253-9d87a80d-7c81-4142-b15e-55e14e79aaf0.jpg)
+
 
 
 
